@@ -13,17 +13,16 @@ def fizzbuzz(x: int) -> str:
         str: fizz, buzz, or fizzbuzz
     """
 
-    if x % 3 == 0 and x % 5 == 0:
-        return "fizzbuzz"
-
-    elif x % 3 == 0:
+    if x % 3 == 0:
         return "fizz"
 
-    elif x % 5 == 0:
+    if x % 5 == 0:
         return "buzz"
 
-    else:
-        return str(x)
+    if (x % 3 == 0) and (x % 5 == 0):
+        return "fizzbuzz"
+
+    return str(x)
 
 
 user_input = int(input("Enter a number: "))
